@@ -10,8 +10,6 @@ Site Admin details:
 
 > password: admin
 
-## Build Setup
-
 ``` bash
 # install dependencies
 npm install
