@@ -143,7 +143,7 @@ export default {
 
                     var self = this;
 
-                    this.$http.post("https://young-sands-22811.herokuapp.com/api/register", {
+                    this.$http.post("https://tbprestapi.herokuapp.com/api/register", {
                         username: this.username,
                         password: this.userPass
                     }).then(function(res) {

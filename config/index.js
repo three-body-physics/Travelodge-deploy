@@ -29,7 +29,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'https://young-sands-22811.herokuapp.com/api',
+        target: 'https://tbprestapi.herokuapp.com/api',
         changeOrigin: true,
         pathRewrite: {
           '^/api': ''

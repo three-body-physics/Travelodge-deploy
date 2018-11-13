@@ -200,7 +200,7 @@ export default {
         methods: {
             postComment() {
 
-                    this.$http.post("https://young-sands-22811.herokuapp.com/api/home/entry/" + this.id, {
+                    this.$http.post("https://tbprestapi.herokuapp.com/api/home/entry/" + this.id, {
                         _id: this.id,
                         content: this.comment,
                         userId: localStorage.getItem("userId"),
@@ -288,7 +288,7 @@ export default {
                 },
 
                 postReq() {
-                    this.$http.get("https://young-sands-22811.herokuapp.com/api/home/entry/" + this.id, {
+                    this.$http.get("https://tbprestapi.herokuapp.com/api/home/entry/" + this.id, {
                         flag: "hi"
                     }).then(function(data) {
 

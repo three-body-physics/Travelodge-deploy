@@ -210,7 +210,7 @@
         <div class="ui two column row" id="headerRow">
             <div class="column">
                 <h4 class="ui header">
-                  Latest entries:
+                  Latest - {{ entries.length }} entries :
                 </h4>
             </div>
             <div class="tablet computer only column">
@@ -293,7 +293,7 @@ export default {
         methods: {
 
             getBlogs() {
-                    this.$http.get("https://young-sands-22811.herokuapp.com/api/home", {
+                    this.$http.get("https://tbprestapi.herokuapp.com/api/home", {
 
                         flag: "hello"
 
@@ -332,7 +332,7 @@ export default {
 
                     if (username, password) {
 
-                        this.$http.post("https://young-sands-22811.herokuapp.com/api/login", {
+                        this.$http.post("https://tbprestapi.herokuapp.com/api/login", {
                             username: username,
                             password: password
                         }).then(function(res) {
@@ -360,7 +360,7 @@ export default {
 
                     } else {
 
-                        this.$http.post("https://young-sands-22811.herokuapp.com/api/login", {
+                        this.$http.post("https://tbprestapi.herokuapp.com/api/login", {
                             username: this.loginName,
                             password: this.loginPass
                         }).then(function(res) {
@@ -429,7 +429,7 @@ export default {
                     this.mobileshow = false;
                 },
 
-                divideEntries() {
+                divideEntries() { //six per page
 
                     for (let i = 0; i <= this.entries.length / 6; i++) {
                         this.pages.push(i);

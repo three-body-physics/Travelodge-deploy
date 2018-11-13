@@ -41,7 +41,7 @@ export default {
             postRequest() {
                     var date = this.getTimeStamp();
 
-                    this.$http.post("https://young-sands-22811.herokuapp.com/api/home", {
+                    this.$http.post("https://tbprestapi.herokuapp.com/api/home", {
                         name: this.blog.name,
                         image: this.blog.image,
                         text: this.blog.text,
@@ -54,7 +54,7 @@ export default {
                     }).then(function(res) {
 
                         console.log(res);
-                        this.$router.push("/home");
+                        this.$router.push("/home/entry/" + res.body.data._id);
 
                     }, function(res) {
 

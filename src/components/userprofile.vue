@@ -201,7 +201,7 @@ export default {
 
     getUserPosts() {
     	
-    	this.$http.post("https://young-sands-22811.herokuapp.com/api/home/user/" + localStorage.getItem("userId"), {userId: localStorage.getItem("userId"), username: localStorage.getItem("username")}, {headers: {Authorization: "Bearer " + localStorage.getItem("JWTtoken")}}).then(function(res){
+    	this.$http.post("https://tbprestapi.herokuapp.com/api/home/user/" + localStorage.getItem("userId"), {userId: localStorage.getItem("userId"), username: localStorage.getItem("username")}, {headers: {Authorization: "Bearer " + localStorage.getItem("JWTtoken")}}).then(function(res){
     		if(res.body.success === false) {
     			this.error = true;
     			this.errorMessage = res.body.message;
@@ -224,7 +224,7 @@ export default {
 
   deleteRequest() {
 
-  	this.$http.delete("https://young-sands-22811.herokuapp.com/api/home/entry/" + this.postToDelete,
+  	this.$http.delete("https://tbprestapi.herokuapp.com/api/home/entry/" + this.postToDelete,
        {headers: {Authorization: "Bearer " + localStorage.getItem("JWTtoken")}}).then(function(res){
   			if(res.body.success === false) {
   				this.errorDelete = true;
